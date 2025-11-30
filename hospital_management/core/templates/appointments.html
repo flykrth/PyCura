@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Appointments</h2>
+
+<a href="/appointments/create/"><button>Book Appointment</button></a>
+
+<table>
+    <tr>
+        <th>Patient</th>
+        <th>Doctor</th>
+        <th>Date</th>
+        <th>Description</th>
+    </tr>
+
+    {% for a in appointments %}
+    <tr>
+        <td>{{ a.patient.user.first_name }}</td>
+        <td>{{ a.doctor.user.first_name }}</td>
+        <td>{{ a.date }}</td>
+        <td>{{ a.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Create Billing Record</h2>
+
+<form method="post">
+    {% csrf_token %}
+    
+    <label>Patient</label>
+    <select name="patient">
+        {% for p in patients %}
+        <option value="{{ p.id }}">{{ p.user.first_name }}</option>
+        {% endfor %}
+    </select>
+
+    <label>Doctor Fee</label>
+    <input name="doctor_fee">
+
+    <label>Room Fee</label>
+    <input name="room_fee">
+
+    <label>Medicine Fee</label>
+    <input name="medicine_fee">
+
+    <button type="submit">Generate Bill</button>
+</form>
+
+{% endblock %}

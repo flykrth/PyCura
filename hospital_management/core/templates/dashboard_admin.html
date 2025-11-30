@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Admin Dashboard</h2>
+
+<ul>
+    <li><a href="/patients/">Manage Patients</a></li>
+    <li><a href="/patients/create/">Add Patient</a></li>
+
+    <li><a href="/doctors/">Manage Doctors</a></li>
+    <li><a href="/doctors/create/">Add Doctor</a></li>
+
+    <li><a href="/rooms/">Room Details</a></li>
+    <li><a href="/rooms/create/">Add Room</a></li>
+
+    <li><a href="/medicines/">Medicine Inventory</a></li>
+    <li><a href="/medicines/create/">Add Medicine</a></li>
+
+    <li><a href="/appointments/">Appointments</a></li>
+    <li><a href="/appointments/create/">Book Appointment</a></li>
+
+    <li><a href="/billing/">Billing Records</a></li>
+    <li><a href="/billing/create/">Create Bill</a></li>
+</ul>
+{% endblock %}

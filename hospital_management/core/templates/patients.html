@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Patient Records</h2>
+<a href="/patients/create/"><button>Add Patient</button></a>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+    </tr>
+    {% for p in patients %}
+    <tr>
+        <td>{{ p.user.first_name }}</td>
+        <td>{{ p.age }}</td>
+        <td>{{ p.address }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

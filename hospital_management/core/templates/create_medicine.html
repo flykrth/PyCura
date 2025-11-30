@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Add Medicine</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <label>Medicine Name</label>
+    <input name="name">
+
+    <label>Quantity</label>
+    <input name="quantity">
+
+    <button type="submit">Save</button>
+</form>
+{% endblock %}

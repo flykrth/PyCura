@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Management</title>
+    <style>
+        body { font-family: Arial; background:#f4f4f4; margin:0; padding:0; }
+        .navbar { background:#333; padding:15px; color:white; }
+        .navbar a { color:white; margin-right:10px; text-decoration:none; }
+        .container {
+            width:80%; margin:20px auto; background:white; padding:20px;
+            border-radius:10px; box-shadow:0 0 10px #aaa;
+        }
+        h2 { color:#333; margin-top:0; }
+        input, select, textarea { width:100%; padding:8px; margin:6px 0; border:1px solid #ccc; border-radius:5px; }
+        button { padding:10px 20px; background:#333; color:white; border:none; cursor:pointer; border-radius:5px; }
+        button:hover { background:#555; }
+        table { width:100%; border-collapse:collapse; margin-top:20px; }
+        table th, td { border:1px solid #ccc; padding:10px; text-align:left; }
+        table th { background:#eee; }
+        ul li { margin:8px 0; }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/login/">Login</a>
+    <a href="/logout/">Logout</a>
+</div>
+
+<div class="container">
+{% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

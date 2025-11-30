@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Billing Details</h2>
+
+<a href="/billing/create/"><button>Create Bill</button></a>
+
+<table>
+    <tr>
+        <th>Patient</th>
+        <th>Doctor Fee</th>
+        <th>Room Fee</th>
+        <th>Medicine Fee</th>
+        <th>Total</th>
+    </tr>
+
+    {% for b in bills %}
+    <tr>
+        <td>{{ b.patient.user.first_name }}</td>
+        <td>{{ b.doctor_fee }}</td>
+        <td>{{ b.room_fee }}</td>
+        <td>{{ b.medicine_fee }}</td>
+        <td>{{ b.total }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

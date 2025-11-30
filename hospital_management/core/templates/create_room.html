@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Add New Room</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <label>Room Number</label>
+    <input name="number">
+
+    <label>Type</label>
+    <input name="type">
+
+    <button type="submit">Save</button>
+</form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Room Details</h2>
+<a href="/rooms/create/"><button>Add Room</button></a>
+
+<table>
+    <tr>
+        <th>Room Number</th>
+        <th>Type</th>
+        <th>Status</th>
+    </tr>
+
+    {% for r in rooms %}
+    <tr>
+        <td>{{ r.number }}</td>
+        <td>{{ r.type }}</td>
+        <td>{% if r.is_available %}Available{% else %}Occupied{% endif %}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
