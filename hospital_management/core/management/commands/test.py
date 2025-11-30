@@ -13,9 +13,10 @@ class Command(BaseCommand):
         # 1. Create admin user
         # ---------------------
         admin_user = User.objects.create_superuser(
-            username="krth",
-            password="krth",
+            username="pandu",
+            password="panduthegreat",
             first_name="Karthik"
         )
         Profile.objects.create(user=admin_user, role="admin")
         self.stdout.write(self.style.SUCCESS("✓ Admin user created (krth/krth)"))
+
